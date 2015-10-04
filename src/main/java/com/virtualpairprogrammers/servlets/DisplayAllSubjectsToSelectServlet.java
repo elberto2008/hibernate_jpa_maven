@@ -11,12 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.virtualpairprogrammers.domain.Subject;
-
 import com.virtualpairprogrammers.services.SubjectManagement;
 import com.virtualpairprogrammers.services.TutorManagement;
 
 public class DisplayAllSubjectsToSelectServlet extends HttpServlet
 {
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= 1L;
+
 	public void doGet (HttpServletRequest request, 
 			HttpServletResponse response) 
 			throws ServletException,IOException
@@ -25,6 +29,7 @@ public class DisplayAllSubjectsToSelectServlet extends HttpServlet
 		int id = new Integer(request.getParameter("id"));
 		
 		SubjectManagement serviceSubject = SubjectManagement.getService();
+		@SuppressWarnings("unused")
 		TutorManagement service = TutorManagement.getService();	
 
 		List<Subject> allSubjects = serviceSubject.getAllSubject();

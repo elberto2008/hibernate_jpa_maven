@@ -12,6 +12,11 @@ import com.virtualpairprogrammers.services.SubjectManagement;
 
 public class DeleteSubjectServlet extends HttpServlet
 {
+	/**
+	 * 
+	 */
+	private static final long	serialVersionUID	= 1L;
+
 	public void doPost (HttpServletRequest request, 
 		     HttpServletResponse response) 
 		    		 				throws ServletException,IOException
@@ -23,6 +28,7 @@ public class DeleteSubjectServlet extends HttpServlet
 		
 		service.deleteSubject(id);
 		
+		@SuppressWarnings("unused")
 		ServletContext context = getServletContext();
 		response.sendRedirect("/myhibernatebasicwebapp/displayAllSubjects.html");
 	}

@@ -1,11 +1,10 @@
 package com.virtualpairprogrammers.services;
 
-import java.rmi.server.UID;
+
 import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 
 import com.virtualpairprogrammers.domain.Student;
 import com.virtualpairprogrammers.domain.Subject;
@@ -37,7 +36,8 @@ public class TutorManagement
     {
     	EntityManager em  = HibernateUtil.getEntityManager();
     
-    	List<Tutor> allTutors = em.createNamedQuery("allTutors").getResultList();
+    	@SuppressWarnings("unchecked")
+		List<Tutor> allTutors = em.createNamedQuery("allTutors").getResultList();
 
     	
     	return allTutors;
@@ -120,7 +120,8 @@ public class TutorManagement
 	{
     	EntityManager em  = HibernateUtil.getEntityManager();
     	System.out.println("BEFORE SELECT");
-    	List<Tutor> findTutorWithoutSubjects = em.createNamedQuery("findTutorWithoutSubjects").getResultList();
+    	@SuppressWarnings("unchecked")
+		List<Tutor> findTutorWithoutSubjects = em.createNamedQuery("findTutorWithoutSubjects").getResultList();
     	System.out.println("AFTER SELECT");
 
 		return findTutorWithoutSubjects;

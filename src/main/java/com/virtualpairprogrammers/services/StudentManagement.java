@@ -6,8 +6,6 @@ import java.util.UUID;
 import javax.persistence.EntityManager;
 
 import com.virtualpairprogrammers.domain.Student;
-import com.virtualpairprogrammers.domain.Subject;
-import com.virtualpairprogrammers.domain.Tutor;
 import com.virtualpairprogrammers.hibernate.HibernateUtil;
 
 public class StudentManagement
@@ -27,7 +25,8 @@ public class StudentManagement
     {
     	EntityManager em  = HibernateUtil.getEntityManager();
     
-    	List<Student> allStudents = em.createNamedQuery("allStudents").getResultList();
+    	@SuppressWarnings("unchecked")
+		List<Student> allStudents = em.createNamedQuery("allStudents").getResultList();
 
     	
     	return allStudents;
@@ -55,6 +54,7 @@ public class StudentManagement
 
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Student> getAllStudentsWithNoTutors()
 	{
     	EntityManager em  = HibernateUtil.getEntityManager();

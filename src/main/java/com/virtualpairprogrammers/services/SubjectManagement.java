@@ -24,7 +24,8 @@ public class SubjectManagement
     {
     	EntityManager em  = HibernateUtil.getEntityManager();
     
-    	List<Subject> allSubjects = em.createNamedQuery("allSubjects").getResultList();
+    	@SuppressWarnings("unchecked")
+		List<Subject> allSubjects = em.createNamedQuery("allSubjects").getResultList();
 
     	
     	return allSubjects;

@@ -2,7 +2,6 @@ package com.virtualpairprogrammers.servlets;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +15,8 @@ import com.virtualpairprogrammers.services.TutorManagement;
 
 public class AddStudentToTutorServlet extends HttpServlet
 {
+	private static final long	serialVersionUID	= 1L;
+
 	
 	public void doPost (HttpServletRequest request, 
 		     HttpServletResponse response) 
@@ -34,6 +35,7 @@ public class AddStudentToTutorServlet extends HttpServlet
 		
 		request.setAttribute("id", studentId);
 		
+		@SuppressWarnings("unused")
 		ServletContext context = getServletContext();
 		response.sendRedirect("/myhibernatebasicwebapp/displayStudentDetail.html?id="+studentId);	
 		
