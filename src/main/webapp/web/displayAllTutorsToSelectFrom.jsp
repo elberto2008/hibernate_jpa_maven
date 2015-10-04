@@ -39,7 +39,7 @@
 				</tr>
 			</c:forEach>
 	 	</table>
-		<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp" />
 		
 		</div>
 	</body>

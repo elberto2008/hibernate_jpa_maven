@@ -87,6 +87,6 @@
 				<input type="submit" value="Delete this student">
 	  </form>
 	 	
-	 	<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp" />
 	</body>
 </html>

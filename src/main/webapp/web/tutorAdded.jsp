@@ -10,7 +10,7 @@
 		
 		<p>Thank you, we now have a new tutor with Staff Id of ${generatedStaffId}</p>
 		
-	 	<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp" />
 		
 	</body>
 </html>
