@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+		 <filter>
+		  <display-name>HibernateFilter</display-name>
+			  <filter-name>HibernateFilter</filter-name>
+			  <filter-class>com.virtualpairprogrammers.filters.HibernateFilter</filter-class>
+		 </filter>
+		 
+		 
+		 <servlet>
+			  <servlet-name>DisplayAllTutorsServlet</servlet-name>
+			  <servlet-class>com.virtualpairprogrammers.servlets.DisplayAllTutorsServlet</servlet-class>
+		 </servlet>
+		
+		 <servlet>
+			  <servlet-name>AddNewTutorServlet</servlet-name>
+			  <servlet-class>com.virtualpairprogrammers.servlets.AddNewTutorServlet</servlet-class>
+		 </servlet>
+		
+		 <servlet>
+			  <servlet-name>DisplayStudentsForTutorServlet</servlet-name>
+			  <servlet-class>com.virtualpairprogrammers.servlets.DisplayStudentsForTutorServlet</servlet-class>
+		 </servlet>
+		
+		 <servlet>
+		 	<servlet-name>DisplayAllSubjectsServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayAllSubjectsServlet</servlet-class>
+		 </servlet>
+		 
+		  <servlet>
+		 	<servlet-name>DisplayAllStudentsServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayAllStudentsServlet</servlet-class>
+		 </servlet>
+		
+		 <servlet>
+		 	<servlet-name>DisplayStudentDetailsServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayStudentDetailsServlet</servlet-class>
+		 </servlet>	
+		 
+		  <servlet>
+		 	<servlet-name>AddNewSubjectServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.AddNewSubjectServlet</servlet-class>
+		 </servlet>
+		 
+		 <servlet>
+		 	<servlet-name>AddNewStudentServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.AddNewStudentServlet</servlet-class>
+		 </servlet>
+		 
+		  <servlet>
+		 	<servlet-name>DisplayStudentsWithNoTutorsServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayStudentsWithNoTutorsServlet</servlet-class>
+		 </servlet>	
+		 
+		  <servlet>
+		 	<servlet-name>DisplayTutorsWithNoSubjectsServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayTutorsWithNoSubjectsServlet</servlet-class>
+		 </servlet>	
+		 	 
+		  <servlet>
+		 	<servlet-name>DisplayAllTutorsToSelectServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayAllTutorsToSelectServlet</servlet-class>
+		 </servlet>
+
+		  <servlet>
+		 	<servlet-name>DisplayAllSubjectsToSelectServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplayAllSubjectsToSelectServlet</servlet-class>
+		 </servlet>		 
+		 
+		 <servlet>
+		 	<servlet-name>AddStudentToTutorServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.AddStudentToTutorServlet</servlet-class>
+		 </servlet>
+		 
+		 <servlet>
+		 	<servlet-name>AddSubjectToTutorServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.AddSubjectToTutorServlet</servlet-class>
+		 </servlet>
+		 
+		  <servlet>
+		 	<servlet-name>DeleteStudentServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DeleteStudentServlet</servlet-class>
+		 </servlet>
+
+		  <servlet>
+		 	<servlet-name>DeleteTutorServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DeleteTutorServlet</servlet-class>
+		 </servlet>
+		 		 
+		 <servlet>
+		 	<servlet-name>DeleteSubjectServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DeleteSubjectServlet</servlet-class>
+		 </servlet>
+		 <servlet>
+		 	<servlet-name>DisplaySubjectDetailsServlet</servlet-name>
+		 	<servlet-class>com.virtualpairprogrammers.servlets.DisplaySubjectDetailsServlet</servlet-class>
+		 </servlet>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <filter-mapping>
+		 	<filter-name>HibernateFilter</filter-name>
+		 	<url-pattern>*.html</url-pattern>
+		 </filter-mapping>
+		 
+		 
+		 <servlet-mapping>
+			  <servlet-name>DisplayAllTutorsServlet</servlet-name>
+			  <url-pattern>/displayAllTutors.html</url-pattern>
+		 </servlet-mapping>
+		 <servlet-mapping>
+			  <servlet-name>AddNewTutorServlet</servlet-name>
+			  <url-pattern>/addNewTutor.html</url-pattern>
+		 </servlet-mapping>
+		 <servlet-mapping>
+			  <servlet-name>DisplayStudentsForTutorServlet</servlet-name>
+			  <url-pattern>/displayTutorDetail.html</url-pattern>
+		 </servlet-mapping>
+		 <servlet-mapping>
+		 	<servlet-name>DisplayAllSubjectsServlet</servlet-name>
+		 	<url-pattern>/displayAllSubjects.html</url-pattern>
+		 </servlet-mapping>
+		
+		 <servlet-mapping>
+		 	<servlet-name>DisplayAllStudentsServlet</servlet-name>
+		 	<url-pattern>/displayAllStudents.html</url-pattern>
+		 </servlet-mapping>
+		
+		 <servlet-mapping>
+		 	<servlet-name>DisplayStudentDetailsServlet</servlet-name>
+		 	<url-pattern>/displayStudentDetail.html</url-pattern>
+		 </servlet-mapping>		
+		 
+		 <servlet-mapping>
+		 	<servlet-name>AddNewSubjectServlet</servlet-name>
+		 	<url-pattern>/addNewSubject.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>AddNewStudentServlet</servlet-name>
+		 	<url-pattern>/addNewStudent.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		  <servlet-mapping>
+		 	<servlet-name>DisplayStudentsWithNoTutorsServlet</servlet-name>
+		 	<url-pattern>/studentWithNoTutors.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>DisplayTutorsWithNoSubjectsServlet</servlet-name>
+		 	<url-pattern>/tutorWithNoSubjects.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>DisplayAllTutorsToSelectServlet</servlet-name>
+		 	<url-pattern>/displayTutorsToSelectFrom.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>DisplayAllSubjectsToSelectServlet</servlet-name>
+		 	<url-pattern>/displaySubjectsToSelectFrom.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>AddStudentToTutorServlet</servlet-name>
+		 	<url-pattern>/addStudent.html</url-pattern>
+		 </servlet-mapping>
+
+		 <servlet-mapping>
+		 	<servlet-name>AddSubjectToTutorServlet</servlet-name>
+		 	<url-pattern>/addSubject.html</url-pattern>
+		 </servlet-mapping>		 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>DeleteStudentServlet</servlet-name>
+		 	<url-pattern>/deleteStudent.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>DeleteTutorServlet</servlet-name>
+		 	<url-pattern>/deleteTutor.html</url-pattern>
+		 </servlet-mapping> 
+		 
+		 <servlet-mapping>
+		 	<servlet-name>DeleteSubjectServlet</servlet-name>
+		 	<url-pattern>/deleteSubject.html</url-pattern>
+		 </servlet-mapping>
+		 
+		 
+		 
+		  <servlet-mapping>
+		 	<servlet-name>DisplaySubjectDetailsServlet</servlet-name>
+		 	<url-pattern>/displaySubjectDetail.html</url-pattern>
+		 </servlet-mapping>	
+</web-app>
+
+
+
