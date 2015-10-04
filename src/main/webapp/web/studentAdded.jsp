@@ -10,7 +10,7 @@
 		
 		<p>Thank you, we now have a new student with Enrollment ID of ${enrollementID}</p>
 		
-	 	<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp" />
 		
 	</body>
 </html>

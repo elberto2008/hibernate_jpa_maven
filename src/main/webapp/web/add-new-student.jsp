@@ -24,6 +24,6 @@
 			<p><input type="SUBMIT" value="Add the Student" class="btn btn-default"/></p>
 		</form>
 		
-		<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp"/>
 	</body>
 </html>

@@ -29,6 +29,6 @@
 			</c:forEach>
 	 	</table>
 	 	<p> The total salary bill is ${totallSalaryBill}.</p>
-		<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp" />
 	</body>
 </html>

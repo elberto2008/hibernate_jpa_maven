@@ -68,7 +68,7 @@
     </div>
 	<div class="container">
 	<div class="col-md-3">
-		<jsp:include page="/footer.jsp" />
+		<jsp:include page="/web/footer.jsp" />
 	</div>
 	</div>
 

@@ -58,6 +58,6 @@
 				<input type="submit" value="Delete this subject">
 	  </form>
 	 	
-	 	<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp" />
 	</body>
 </html>

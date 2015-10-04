@@ -15,6 +15,6 @@
 			<p><input type="SUBMIT" value="Add the Tutor" class="button"/></p>
 		</form>
 		
-		<jsp:include page="/footer.jsp"/>
+		<jsp:include page="/web/footer.jsp"/>
 	</body>
 </html>
