@@ -13,7 +13,7 @@
 	
 		<h1>All Tutors to select from</h1>
 		
-		<table align="center">
+		<table style="margin: 0px auto;">
 			<tr>
 				<th>Choose Tutor</th>
 				<th>Staff ID</th>

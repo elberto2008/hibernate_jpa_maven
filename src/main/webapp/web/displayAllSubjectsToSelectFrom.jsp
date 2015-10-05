@@ -10,7 +10,7 @@
 	<body>
 		<h1>All Subjects to select from</h1>
 		
-		<table align="center">
+		<table style="margin: 0px auto;">
 			<tr>
 				<th>Choose Subject</th>
 				<th>#Semesters</th>

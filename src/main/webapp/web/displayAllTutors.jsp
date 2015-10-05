@@ -10,7 +10,7 @@
 	<body>
 		<h1>All Tutors in the College</h1>
 		
-		<table align="center">
+		<table style="margin: 0px auto;">
 			<tr>
 				<th>Name</th>
 				<th>Salary</th>
