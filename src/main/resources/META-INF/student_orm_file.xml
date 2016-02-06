@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_0.xsd"
+                 version="2.0">
+      
+      <named-query name="allStudents">
+          <query>
+			FROM Student
+          </query>
+      </named-query>
+      
+      	<!--Lazy fetch -->
+	<named-query name="studentByIdWithLazyFetchOfStudents">
+		<query>select student from Student as student where student.id = :id</query>
+	</named-query>	
+      
+      
+      <named-query name="allStudentsNames">
+          <query>
+			SELECT student.name FROM Student as student
+          </query>
+      </named-query>
+      
+      <named-query name="deleteStudentById">
+      	<query>
+      		delete from Student as student where student.id = :id
+      	</query>
+      </named-query>
+       <named-query name="allStudentsNamesAndEnrollmentIDs">
+          <query>
+			SELECT student.enrollmentID, student.name FROM Student as student
+          </query>
+      </named-query>
+      
+          
+       <named-query name="allStudentsNamesAndEnrollmentIDs1">
+          <query>
+			SELECT student.enrollmentID, student.name FROM Student student
+          </query>
+      </named-query>
+      
+       <named-query name="allStudentsNamesAndEnrollmentIDsAndSupervisorsNAmes">
+          <query>
+			SELECT student.enrollmentID, student.name, student.supervisor.name FROM Student as student
+          </query>
+      </named-query>
+      
+      
+      <named-query name="studentByName">
+      	<query>
+      		FROM Student as student WHERE student.name = :name
+      	</query>
+      </named-query>
+      
+      <named-query name="studentsSupervisedByTutor">
+      	<query>
+      		FROM Student as student WHERE student.supervisor = :tutor
+      	</query>
+      </named-query>
+      
+      <named-query  name="findStudentsBySupervisorName" >
+      	<query>
+      		 FROM Student as student WHERE student.supervisor.name = :name		
+      	</query>
+      </named-query>
+      
+      <named-query  name="findStudentsByCity" >
+      	<query>
+      		 FROM Student as student WHERE student.address.city = :city		
+      	</query>
+      </named-query>
+     
+      <named-query  name="findStudentWhoseSupervisorsTeachASubject" >
+      	<query>
+      		 FROM Student as student WHERE :subjectTaught member of student.supervisor.subjectsQualifiedToTeach		
+      	</query>
+      </named-query>
+
+      <named-query name="countStudents">
+      	<query>
+      		select count(student) FROM Student as student
+      	</query>
+      </named-query>
+      
+      <named-query name="studentsWithNoTutor">
+      	<query>
+      		select student from Student as student where student.supervisor is null
+      	</query>
+      </named-query>
+      
+</entity-mappings>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_0.xsd"
+                 version="2.0">
+      
+        <named-query name="allTutors">
+  	 	<query>
+  	 		FROM Tutor 
+  	 	</query>
+  	 </named-query>
+
+
+
+	<named-query name="totalSalary">
+		<query>select sum (tutor.salary) from Tutor as tutor</query>
+	</named-query>	
+	  	 
+
+      <named-query name="findTutorWithoutSubjects">
+      	<query>
+      		from Tutor as tutor where tutor.subjectsQualifiedToTeach is empty
+      	</query>
+      </named-query>
+      
+        
+  <!--Lazy fetch -->
+	<named-query name="tutorByIdWithLazyFetchOfStudents">
+		<query>select tutor from Tutor as tutor where tutor.id = :id</query>
+	</named-query>	
+  
+        
+         
+     
+     
+
+  	 
+  	 <named-query  name="findTutorWithoutStudents" >
+      	<query>
+      		 FROM Tutor as tutor WHERE tutor.supervisionGroup is empty		
+      	</query>
+      </named-query> 
+    
+     <named-query  name="findTutorWithStudents" >
+      	<query>
+      		 FROM Tutor as tutor WHERE tutor.supervisionGroup is not empty		
+      	</query>
+      </named-query>
+ 
+      <named-query  name="findTutorsQualifiedToTeachASpecificSubject" >
+      	<query>
+      		 FROM Tutor as tutor WHERE :subject member of tutor.subjectsQualifiedToTeach		
+      	</query>
+      </named-query>
+      
+      <named-query  name="findTutorsWhoseStudentsLiveInACity1" >
+      	<query>
+      		SELECT distinct tutor FROM Tutor as tutor join tutor.supervisionGroup as student WHERE student.address.city = :tcity		
+      	</query>
+      </named-query>
+        
+      <named-query  name="findTutorsWhoseStudentsLiveInACity2" >
+      	<query>
+			SELECT distinct student.supervisor FROM Student as student WHERE student.address.city = :tcity		
+      	</query>
+      </named-query>
+  
+<!--       Example of bulk Update--> 
+      <named-query name="doubleSalary">
+      	<query>
+      		UPDATE Tutor as tutor set tutor.salary = tutor.salary*2
+      	</query>
+      </named-query>
+      
+</entity-mappings>
+
