@@ -35,7 +35,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-					<outputDirectory>/Applications/apache-tomcat-7.0.47/webapps</outputDirectory>
+					<outputDirectory>/Applications/apache-tomcat-8.0.30/webapps</outputDirectory>
 					<warName>myhibernatebasicwebapp</warName>
 
 				</configuration>
